@@ -18,6 +18,7 @@ provision.sh
 *.komodoproject
 .DS_Store
 feeds/recent.rss
+dump.rdb
 .eslintcache
 .svn
 
