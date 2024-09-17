@@ -11,7 +11,7 @@
 						{{{ if description }}}
 						<label class="form-label" for="fileInput">{description}</label>
 						{{{ end }}}
-						<input type="file" id="fileInput" name="files[]" {{{ if accept }}}accept="{accept}, video/*{{{ end }}}">
+						<input type="file" id="fileInput" name="files[]" {{{ if accept }}}accept="{accept}"{{{ end }}}>
 						{{{ if showHelp }}}
 						<p class="form-text">
 							{{{ if accept }}}
