@@ -178,7 +178,7 @@
 	"move-topic-instruction": "Select the target category and then click move",
 	"change-owner-instruction": "Click the posts you want to assign to another user",
 
-	"composer.title-placeholder": "Enter your topic title here...",
+	"composer.title-placeholder": "Enter your test here...",
 	"composer.handle-placeholder": "Enter your name/handle here",
 	"composer.hide": "Hide",
 	"composer.discard": "Discard",
