@@ -65,15 +65,5 @@
 		"textClass": "d-lg-none",
 		"text": "[[global:header.admin]]",
 		"groups": ["administrators"]
-	},
-
-	{
-		"route": "/additionalInfo",
-		"title": "[[global:header.additionalInfo]]",
-		"enabled": true,
-		"iconClass": "fa-cogs",
-		"textClass": "d-lg-none",
-		"text": "[[global:header.additionalInfo]]"
 	}
-
 ]
