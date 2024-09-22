@@ -1,16 +1,19 @@
-get:
-  tags:
-    - admin
-  summary: Retrieve additional information
-  responses:
-    "200":
-      description: Successful response with additional information
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              info:
-                type: string
-                example: "This is the additional information."
+paths:
+  /api/additional-info:
+    get:
+      summary: Get Additional Information
+      description: Returns additional information for the user.
+      operationId: getAdditionalInfo
+      responses:
+        '200':
+          description: A JSON object containing additional information.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  info:
+                    type: string
+                    example: "This is the additional information."
+
 
