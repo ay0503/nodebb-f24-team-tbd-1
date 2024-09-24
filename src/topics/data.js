@@ -21,7 +21,7 @@ module.exports = function (Topics) {
 			return [];
 		}
 
-		// // Add 'claimerUid' and 'claimerUsername' to the fields if not already included
+		// Add 'claimerUid' and 'claimerUsername' to the fields if not already included
 		// if (!fields.includes('claimerUid')) {
 		// 	fields.push('claimerUid');
 		// }
