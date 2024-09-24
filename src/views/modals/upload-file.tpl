@@ -1,8 +1,8 @@
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-zen" aria-hidden="true">
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-file" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h1 class="test">{title}</h1>
+				<h5 class="modal-title">{title}</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
 			</div>
 			<div class="modal-body">
@@ -11,7 +11,7 @@
 						{{{ if description }}}
 						<label class="form-label" for="fileInput">{description}</label>
 						{{{ end }}}
-						<input type="file" id="fileInput" name="files[]" {{{ if accept }}}accept="{accept}, video/*{{{ end }}}">
+						<input type="file" id="fileInput" name="files[]" {{{ if accept }}}accept="{accept}"{{{ end }}}>
 						{{{ if showHelp }}}
 						<p class="form-text">
 							{{{ if accept }}}
