@@ -1,8 +1,8 @@
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-file" aria-hidden="true">
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-zen" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">{title}</h5>
+				<h1 class="test">{title}</h1>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
 			</div>
 			<div class="modal-body">
