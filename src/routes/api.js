@@ -43,3 +43,4 @@ module.exports = function (app, middleware, controllers) {
 		middleware.checkAccountPermissions,
 	], helpers.tryRoute(controllers.accounts.edit.uploadPicture));
 };
+

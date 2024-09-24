@@ -57,3 +57,4 @@ module.exports = function (app, name, middleware, controllers) {
 
 	setupPageRoute(app, `/message/:mid`, [middleware.ensureLoggedIn], controllers.accounts.chats.redirectToMessage);
 };
+
