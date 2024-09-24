@@ -12,7 +12,7 @@ const intFields = [
 	'tid', 'cid', 'uid', 'mainPid', 'postcount',
 	'viewcount', 'postercount', 'deleted', 'locked', 'pinned',
 	'pinExpiry', 'timestamp', 'upvotes', 'downvotes', 'lastposttime',
-	'deleterUid',
+	'deleterUid', 'claimerUid',
 ];
 
 module.exports = function (Topics) {
@@ -20,6 +20,15 @@ module.exports = function (Topics) {
 		if (!Array.isArray(tids) || !tids.length) {
 			return [];
 		}
+
+		// // Add 'claimerUid' and 'claimerUsername' to the fields if not already included
+		// if (!fields.includes('claimerUid')) {
+		// 	fields.push('claimerUid');
+		// }
+
+		// if (!fields.includes('claimerUsername')) {
+		// 	fields.push('claimerUsername');
+		// }
 
 		// "scheduled" is derived from "timestamp"
 		if (fields.includes('scheduled') && !fields.includes('timestamp')) {

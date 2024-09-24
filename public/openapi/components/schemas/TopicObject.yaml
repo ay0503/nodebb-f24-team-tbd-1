@@ -221,6 +221,8 @@ TopicObjectSlim:
           type: number
         deleterUid:
           type: number
+        claimerUid:
+          type: number
         titleRaw:
           type: string
         locked:
