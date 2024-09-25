@@ -21,14 +21,6 @@ module.exports = function (Topics) {
 			return [];
 		}
 
-		// if (!fields.includes('claimerUid')) {
-		// 	fields.push('claimerUid');
-		// }
-
-		// if (!fields.includes('claimerUsername')) {
-		// 	fields.push('claimerUsername');
-		// }
-
 		// "scheduled" is derived from "timestamp"
 		if (fields.includes('scheduled') && !fields.includes('timestamp')) {
 			fields.push('timestamp');
