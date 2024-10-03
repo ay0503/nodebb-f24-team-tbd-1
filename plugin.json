@@ -1,0 +1,21 @@
+{
+    "id": "nodebb-plugin-additional-info",
+    "name": "NodeBB Additional Info",
+    "description": "Adds an additional info page",
+    "url": "http://yourpluginurl.com",
+    "hooks": [
+      {
+        "hook": "static:app.load",
+        "method": "init"
+      }
+    ],
+    "library": "./src/controllers/index.js",
+    "routes": {
+      "/additional-info": {
+        "method": "get",
+        "handler": "./src/controllers/additional-info-controller.get",
+        "name": "additional-info"
+      }
+    }
+  }
+  

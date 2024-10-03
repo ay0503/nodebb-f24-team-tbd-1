@@ -38,6 +38,8 @@ Controllers['404'] = require('./404');
 Controllers.errors = require('./errors');
 Controllers.composer = require('./composer');
 
+Controllers.additionalInfo = require('./additional-info');
+
 Controllers.write = require('./write');
 
 Controllers.reset = async function (req, res) {
