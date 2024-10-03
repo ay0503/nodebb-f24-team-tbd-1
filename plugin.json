@@ -13,10 +13,17 @@
   "routes": {
     "/additional-info": {
       "method": "get",
-      "handler": "./src/controllers/additional-info-controller.get",
-      "name": "additional-info"
+      "handler": "./src/controllers/additional-info"
     }
-  }
+  },
+  "admin": {
+    "modules": {
+      "settings": "./src/admin/settings"
+    }
+  },
+  "dependencies": {},
+  "keywords": []
 }
+
 
   
