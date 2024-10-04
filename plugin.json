@@ -2,7 +2,6 @@
   "id": "nodebb-plugin-additional-info",
   "name": "NodeBB Additional Info",
   "description": "Adds an additional info page",
-  "url": "http://yourpluginurl.com",
   "hooks": [
     {
       "hook": "static:app.load",
