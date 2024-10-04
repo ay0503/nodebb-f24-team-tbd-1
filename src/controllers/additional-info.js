@@ -10,7 +10,6 @@ additionalInfoController.get = async function (req, res, next) {
     const data = {
         title: 'Additional Information',
         breadcrumbs: helpers.buildBreadcrumbs([{ text: 'Additional Information' }]),
-        // Add any other static or dynamic data you want to display
     };
 
     // Render the additional-info template without the 'templates/' prefix
