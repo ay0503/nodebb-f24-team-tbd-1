@@ -43,7 +43,6 @@ Controllers.additionalInfo = require('./additional-info');
 // Add init function to register routes - ChatGPT
 Controllers.init = async function (params) {
 	const { router } = params;
-  
 	// Register the /additional-info route
 	router.get('/additional-info', Controllers.additionalInfo.get);
 };
