@@ -84,7 +84,9 @@ _mounts.categories = (app, name, middleware, controllers) => {
 };
 
 _mounts.additionalInfo = (app, name, middleware, controllers) => {
-	setupPageRoute(app, `/${name}`, [], controllers.additionalInfo.list);
+	const middlewares = [middleware.canViewInfo];
+
+	setupPageRoute(app, `/${name}`, middlewares, controllers.additionalInfo.list);
 };
 
 _mounts.category = (app, name, middleware, controllers) => {
