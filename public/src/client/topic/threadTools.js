@@ -18,6 +18,8 @@ define('forum/topic/threadTools', [
 	ThreadTools.init = function (tid, topicContainer) {
 		renderMenu(topicContainer);
 
+		console.log('hello running');
+
 		$('.topic-main-buttons [title]').tooltip({
 			container: '#content',
 			animation: false,
@@ -66,7 +68,14 @@ define('forum/topic/threadTools', [
 			return false;
 		});
 
+		$(document).on('click', '[component="topic/claim"]', function () {
+			console.log('started');
+			topicCommand('put', '/claim', 'claim');
+			return false;
+		});
+
 		topicContainer.on('click', '[component="topic/mark-unread"]', function () {
+			console.log('unread');
 			topicCommand('del', '/read', undefined, () => {
 				if (app.previousUrl && !app.previousUrl.match('^/topic')) {
 					ajaxify.go(app.previousUrl, function () {
@@ -234,6 +243,7 @@ define('forum/topic/threadTools', [
 		}
 		const tid = ajaxify.data.tid;
 		const body = {};
+		console.log(`/topics/${tid}${path}`);
 		const execute = function (ok) {
 			if (ok) {
 				api[method](`/topics/${tid}${path}`, body)

@@ -32,7 +32,7 @@ module.exports = function () {
 	setupApiRoute(router, 'put', '/:tid/ignore', [...middlewares, middleware.assert.topic], controllers.write.topics.ignore);
 	setupApiRoute(router, 'delete', '/:tid/ignore', [...middlewares, middleware.assert.topic], controllers.write.topics.unfollow); // intentional, unignore == unfollow
 
-	setupApiRoute(router, 'put', '/:tid/claim', [middleware.ensureLoggedIn, middleware.isTA], controllers.topics.claim);
+	setupApiRoute(router, 'put', '/:tid/claim', [...middlewares, middleware.assert.topic], controllers.write.topics.claimTopic);
 
 	setupApiRoute(router, 'put', '/:tid/tags', [...middlewares, middleware.checkRequired.bind(null, ['tags']), middleware.assert.topic], controllers.write.topics.updateTags);
 	setupApiRoute(router, 'patch', '/:tid/tags', [...middlewares, middleware.checkRequired.bind(null, ['tags']), middleware.assert.topic], controllers.write.topics.addTags);

@@ -1,6 +1,8 @@
 'use strict';
 
 
+console.log('================================');
+
 define('forum/topic', [
 	'forum/infinitescroll',
 	'forum/topic/threadTools',
@@ -53,6 +55,7 @@ define('forum/topic', [
 
 		postTools.init(tid);
 		threadTools.init(tid, $('.topic'));
+		console.log('initialized');
 		events.init();
 
 		sort.handleSort('topicPostSort', 'topic/' + ajaxify.data.slug);

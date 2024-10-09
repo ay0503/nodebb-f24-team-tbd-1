@@ -137,7 +137,7 @@ topicsAPI.claim = async function (caller, { tid }) {
 
 	// start websocket event to notify other clients
 	websockets.in(`topic_${tid}`).emit('event:topic_claimed', {
-		tid: tid,
+		tid,
 		claimerUid: caller.uid,
 		claimerUsername: caller.username,
 	});

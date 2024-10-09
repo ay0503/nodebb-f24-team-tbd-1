@@ -70,7 +70,7 @@ Topics.pin = async (req, res) => {
 	helpers.formatApiResponse(200, res);
 };
 
-Topics.claim = async (req, res) => {
+Topics.claimTopic = async (req, res) => {
 	await api.topics.claim(req, { tids: [req.params.tid] });
 	helpers.formatApiResponse(200, res);
 };
