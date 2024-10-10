@@ -33,7 +33,7 @@ module.exports = function (User) {
 		});
 		fields = result.fields;
 		data = result.data;
-		
+
 		await validateData(uid, data);
 
 		const oldData = await User.getUserFields(updateUid, fields);
