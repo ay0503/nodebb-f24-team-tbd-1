@@ -83,7 +83,7 @@ module.exports = function (User) {
 				user.oldUid = uniqueUids[index];
 			}
 		});
-		
+
 		await modifyUserData(result.users, fields, fieldsToRemove);
 		return uidsToUsers(uids, uniqueUids, result.users);
 	};
@@ -203,12 +203,12 @@ module.exports = function (User) {
 			}
 
 			db.parseIntFields(user, intFields, requestedFields);
-			
+
 			user.reputationSilver = true;
 			if (user.hasOwnProperty('reputationSilver')) {
 				user.reputationSilver = (user.reputation >= 500);
 			}
-			
+
 			if (user.hasOwnProperty('reputationGold')) {
 				user.reputationGold = (user.reputation >= 2000);
 			}
