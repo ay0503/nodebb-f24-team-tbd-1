@@ -42,7 +42,6 @@ module.exports = function (User) {
 		groupTitle: '',
 		groupTitleArray: [],
 		status: 'offline',
-		//reputation: 100,
 		reputationSilver: true,
 		reputationGold: true,
 		'email:confirmed': 0,
