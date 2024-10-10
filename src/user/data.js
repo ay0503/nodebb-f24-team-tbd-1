@@ -54,7 +54,6 @@ module.exports = function (User) {
 		if (!Array.isArray(uids) || !uids.length) {
 			return [];
 		}
-		console.log("userfields");
 		uids = uids.map(uid => (isNaN(uid) ? 0 : parseInt(uid, 10)));
 
 		const fieldsToRemove = [];

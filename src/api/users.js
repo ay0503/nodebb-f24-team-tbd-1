@@ -34,7 +34,6 @@ usersAPI.create = async function (caller, data) {
 		throw new Error('[[error:invalid-data]]');
 	}
 	await hasAdminPrivilege(caller.uid, 'users');
-	console.log("printttttttttttt");
 	const uid = await user.create(data);
 	return await user.getUserData(uid);
 };
@@ -44,7 +43,6 @@ usersAPI.get = async (caller, { uid }) => {
 	if (!canView) {
 		throw new Error('[[error:no-privileges]]');
 	}
-	console.log("printttttttttttt");
 	const userData = await user.getUserData(uid);
 	return await user.hidePrivateData(userData, caller.uid);
 };
@@ -57,7 +55,6 @@ usersAPI.update = async function (caller, data) {
 	if (!data || !data.uid) {
 		throw new Error('[[error:invalid-data]]');
 	}
-	console.log("printttttttttttt");
 	const oldUserData = await user.getUserFields(data.uid, ['email', 'username']);
 	if (!oldUserData || !oldUserData.username) {
 		throw new Error('[[error:invalid-data]]');
@@ -125,7 +122,6 @@ usersAPI.updateSettings = async function (caller, data) {
 	if (!caller.uid || !data || !data.settings) {
 		throw new Error('[[error:invalid-data]]');
 	}
-	console.log("printttttttttttt");
 	const canEdit = await privileges.users.canEdit(caller.uid, data.uid);
 	if (!canEdit) {
 		throw new Error('[[error:no-privileges]]');
@@ -183,7 +179,6 @@ usersAPI.follow = async function (caller, data) {
 
 	const userData = await user.getUserFields(caller.uid, ['username', 'userslug']);
 	const { displayname } = userData;
-	console.log("printttttttttttt");
 	const notifObj = await notifications.create({
 		type: 'follow',
 		bodyShort: `[[notifications:user-started-following-you, ${displayname}]]`,
