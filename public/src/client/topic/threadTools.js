@@ -54,6 +54,7 @@ define('forum/topic/threadTools', [
 		});
 
 		topicContainer.on('click', '[component="topic/claim"]', function () {
+			console.log('started');
 			topicCommand('put', '/claim', 'claim');
 			return false;
 		});
@@ -65,12 +66,6 @@ define('forum/topic/threadTools', [
 
 		topicContainer.on('click', '[component="topic/unpin"]', function () {
 			topicCommand('del', '/pin', 'unpin');
-			return false;
-		});
-
-		$(document).on('click', '[component="topic/claim"]', function () {
-			console.log('started');
-			topicCommand('put', '/claim', 'claim');
 			return false;
 		});
 
@@ -151,6 +146,7 @@ define('forum/topic/threadTools', [
 		});
 
 		topicContainer.on('click', '[component="topic/following"]', function () {
+			console.log('follow');
 			changeWatching('follow');
 		});
 		topicContainer.on('click', '[component="topic/not-following"]', function () {
