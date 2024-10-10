@@ -14,10 +14,12 @@ const plugins = require('../plugins');
 
 module.exports = function (User) {
 	User.updateProfile = async function (uid, data, extraFields) {
+		console.log("printttttttttttt");
 		let fields = [
 			'username', 'email', 'fullname', 'website', 'location',
 			'groupTitle', 'birthday', 'signature', 'aboutme',
 		];
+		console.log("printttttttttttt");
 		if (Array.isArray(extraFields)) {
 			fields = _.uniq(fields.concat(extraFields));
 		}
@@ -33,7 +35,7 @@ module.exports = function (User) {
 		});
 		fields = result.fields;
 		data = result.data;
-
+		
 		await validateData(uid, data);
 
 		const oldData = await User.getUserFields(updateUid, fields);
@@ -99,6 +101,7 @@ module.exports = function (User) {
 		if (!data.username) {
 			return;
 		}
+		console.log("printttttttttttt");
 		data.username = data.username.trim();
 
 		let userData;
