@@ -104,31 +104,27 @@ module.exports = function (Categories) {
 			const createSortedSet = `cid:${cid}:tids:create`;
 			const postIdsWithScores = await db.getSortedSetRangeWithScores(voteSortedSet, 0, -1);
 			const tempSortedSet = `cid:${cid}:tids:popular`;
-			await db.delete(tempSortedSet); 
+			await db.delete(tempSortedSet);
 			const recentIdsWithScores = await db.getSortedSetRangeWithScores(createSortedSet, 0, -1);
 
 			const currentTime = Date.now();
 			for (let i = 0; i < postIdsWithScores.length; i += 1) {
 				const postId = postIdsWithScores[i];
 				const votes = postIdsWithScores[i];
-	
-				const result = recentIdsWithScores.find(item => item.value === postId['value']);
+				const result = recentIdsWithScores.find(item => item.value === postId.value);
 				const postCreationTime = result ? result.score : null;
-				if (!postCreationTime) {
-					continue;
+				if (postCreationTime) {
+					const timeSinceCreation = (currentTime - postCreationTime) / 3600000;
+					const votes_num = votes.score + 1;
+					const time = (timeSinceCreation + 2) ** 1.8;
+					const score = votes_num / time;
+					db.sortedSetAdd(tempSortedSet, score, postId.value);
 				}
-
-				const timeSinceCreation = (currentTime - postCreationTime) /3600000; 
-				const votes_num = votes['score'] + 1;
-				const time = Math.pow(timeSinceCreation+2,1.8)
-				const score = votes_num / time;
-
-				await db.sortedSetAdd(tempSortedSet, score, postId['value']);
 			}
 
 
 			set = tempSortedSet;
-		}else{
+		} else {
 			set = sortToSet.hasOwnProperty(sort) ? sortToSet[sort] : `cid:${cid}:tids`;
 		}
 
