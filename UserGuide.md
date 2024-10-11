@@ -42,4 +42,20 @@ The Additional Information Page can be found by navigating to the home page and 
 ### Automated Tests
 The automated tests can be located in tests/controller.js and tests/controller-admin.js
 
+### Kevin Cao - Badge next to users with high reputation
+
+### Overview
+The **User Badge** is a feature that adds a badge next to the username when ever they have high reputation. There are two different tiers, namely silver and gold, where gold requires more reputation.
+
+### Where to find User Badge
+**Log In**: Login first before accessing
+**Click on profile** Start with the homepage, then click on the top right corner where the profile picture is, this opens a dropdown menu which has statuses and moderator tools
+**Click on button with username** The top button has your username on it. You can now see a badge next to the name.
+
+You can also see it by going to homepage -> general discussion -> click on a post to see badge next to post author.
+
+### Testing
+Since this is a frontend feature, the way to test is mainly by going to node_modules/nodebb-theme-harmony/templates/partials/account/header.tpl and modifying the reputation variable to get different badge or no badge.
+
+
 
