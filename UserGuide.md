@@ -40,6 +40,6 @@ The Additional Information Page can be found by navigating to the home page and 
 
 
 ### Automated Tests
-The automated tests can be located at the very bottom of tests/users.js
+The automated tests can be located in tests/controller.js and tests/controller-admin.js
 
 
