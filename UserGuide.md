@@ -23,3 +23,23 @@ The Claim Button is located in the topic toolbar, typically at the top of each d
 
 ### Automated Tests
 The automated tests can be located at the very bottom of tests/topics.js
+
+## Lexi Kronowitz - Additional Information Form User Guide
+
+### Overview
+The **Additional Information Form** is a feature that allows a user to fill out a form with their additional information that will be sent to the admin/professor.
+
+### Where to Find the Additional Information Page
+The Additional Information Page can be found by navigating to the home page and clicking the "Additional Information" button on the left sidebar. The button is available only for logged-in users.
+
+### How to Access the Additional Information Form
+1. **Log In**: You must be logged in to submit a form.
+2. **Navigate to the Home Page**: The button to access this form is in the left sidebar on the home page
+3. **Click the Additional Information**: Click the button labeled "Additional Information" to access the form
+4. **Confirmation**: Once the button is click, the new endpoint should open and the form will be visible
+
+
+### Automated Tests
+The automated tests can be located at the very bottom of tests/users.js
+
+
