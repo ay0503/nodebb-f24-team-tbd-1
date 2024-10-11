@@ -58,4 +58,17 @@ You can also see it by going to homepage -> general discussion -> click on a pos
 Since this is a frontend feature, the way to test is mainly by going to node_modules/nodebb-theme-harmony/templates/partials/account/header.tpl and modifying the reputation variable to get different badge or no badge.
 
 
+## Erke Xia - Sort posts by popularity
+
+### Overview
+The feature allows a user to sort existing posts by popularity, which is determined by a combination of the number of votes a post receives and the time of creation.
+
+### How to Sort Posts by Popularity
+1. **Navigate to the Announcements page** (also supported on General Discussion, Comment and Feedback, and Blogs pages).
+2. **Click Recently Replied**: This is the default sorting method dropdown.
+3. **Choose popularity**: From the dropdown list, choose the option labeled "popularity" to sort posts accordingly.
+
+### Automated Tests
+The automated tests can be located in tests/controller.js
+
 
